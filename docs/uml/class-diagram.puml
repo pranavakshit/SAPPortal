@@ -1,0 +1,37 @@
+
+---
+
+### **class-diagram.puml**
+
+This is a PlantUML code for generating a simple class diagram for your project. You can visualize this diagram using a PlantUML editor (such as [PlantText](https://www.planttext.com/)).
+
+```plantuml
+@startuml
+class Student {
+    - String name
+    - String sap
+    - String contact
+    + String getName()
+    + String getSap()
+    + String getContact()
+}
+
+class DatabaseConnection {
+    - String URL
+    - String USER
+    - String PASSWORD
+    + static Connection getConnection()
+}
+
+class MainPanel {
+    - JTextField nameField
+    - JTextField sapField
+    - JTextField contactField
+    - JButton saveButton
+    + void saveStudent()
+    + static void main(String[] args)
+}
+
+MainPanel --> DatabaseConnection : uses
+MainPanel --> Student : manages
+@enduml

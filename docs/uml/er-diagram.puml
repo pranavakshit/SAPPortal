@@ -1,0 +1,10 @@
+@startuml
+
+entity "Student" {
+  *id : INT
+  *name : VARCHAR
+  *sap : VARCHAR
+  *contact : VARCHAR
+}
+
+@enduml
